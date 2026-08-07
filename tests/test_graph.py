@@ -33,6 +33,29 @@ class GraphTests(unittest.TestCase):
         ba = dict(neighbors["B"])["A"]
         self.assertAlmostEqual(ab, ba)
 
+    def test_point_in_time_events_ignore_future_and_apply_inactivation(self):
+        rows = [
+            {"source": "A", "target": "B", "layer": "industry", "effective_date": "2026-08-02", "active": True},
+            {"source": "A", "target": "B", "layer": "industry", "effective_date": "2026-08-04", "active": False},
+            {"source": "B", "target": "C", "layer": "industry", "effective_date": "2026-08-05", "active": True},
+        ]
+        before = build_graph.build(rows, nodes=["A", "B", "C"], date="2026-08-03")
+        after = build_graph.build(rows, nodes=["A", "B", "C"], date="2026-08-04")
+        self.assertEqual([(edge["source"], edge["target"]) for edge in before["edges"]], [("A", "B")])
+        self.assertEqual(after["edges"], [])
+        self.assertNotEqual(before["fingerprint"], after["fingerprint"])
+
+    def test_formal_mode_rejects_static_rows(self):
+        with self.assertRaises(ValueError):
+            build_graph.build(self.rows, nodes=["A", "B"], date="2026-08-03")
+
+    def test_layer_weight_changes_edge_weight(self):
+        graph = build_graph.build(
+            [{"source": "A", "target": "B", "layer": "concept", "effective_date": "2026-08-01", "weight": 2}],
+            layer_weights={"concept": 0.25}, nodes=["A", "B"], date="2026-08-03",
+        )
+        self.assertEqual(graph["edges"][0]["weight"], 0.5)
+
 
 if __name__ == "__main__":
     unittest.main()

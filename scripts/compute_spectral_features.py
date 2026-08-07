@@ -44,7 +44,7 @@ def propagate(values, graph, steps=1):
     return current
 
 
-def compute(current_values, previous_values, graph, steps=2):
+def compute(current_values, previous_values, graph, steps=2, min_degree=0.0):
     current = robust_z(current_values)
     previous = robust_z(previous_values)
     low = propagate(current, graph, steps)
@@ -55,6 +55,8 @@ def compute(current_values, previous_values, graph, steps=2):
         status = "available"
         if degree.get(node, 0.0) <= 0:
             status = "isolated_node"
+        elif degree.get(node, 0.0) < min_degree:
+            status = "below_min_degree"
         elif node not in current:
             status = "missing_channel"
         elif node not in previous:

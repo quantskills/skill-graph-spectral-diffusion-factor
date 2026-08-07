@@ -12,4 +12,7 @@ jobs:
           python-version: "3.11"
       - run: python -m unittest discover -s tests -v
       - run: python -m compileall -q scripts tests
+      - run: python -c "import json, pathlib; [json.loads(p.read_text(encoding='utf-8')) for p in pathlib.Path('.').rglob('*.json')]"
+      - run: python scripts/validate_freeze.py examples/config.example.json
+      - run: test -s LICENSE && test "$(wc -c < LICENSE)" -ge 35000 && test -f README.md && test -f README.en.md && test -f HERMES.md && test -f agents/cursor-rule.mdc && test -f agents/portable-loader.md
       - run: node scripts/validate-qsh-form.mjs SKILL.md

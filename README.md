@@ -13,11 +13,12 @@
 ## 快速开始
 
 ```bash
-python scripts/build_graph.py tests/fixtures/minimal_panel/relationships.json --out /tmp/graph.json
-python scripts/build_diffusion_panel.py tests/fixtures/minimal_panel/panel.json tests/fixtures/minimal_panel/relationships.json --out /tmp/factors.json
+python scripts/build_diffusion_panel.py tests/fixtures/minimal_panel/panel.json tests/fixtures/minimal_panel/relationships.json --config examples/config.example.json --allow-static-fixture --out /tmp/factors.json
 python -m unittest discover -s tests -v
 node scripts/validate-qsh-form.mjs SKILL.md
 ```
+
+`relationships.json` is a static synthetic fixture and therefore uses `--allow-static-fixture`. Formal runs must provide `effective_date` and must not use that flag.
 
 ## 核心通道
 
