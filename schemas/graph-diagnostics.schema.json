@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date", "node_count", "edge_count", "isolated_node_count", "graph_fingerprint"],
+  "properties": {
+    "date": {"type": "string"},
+    "node_count": {"type": "integer", "minimum": 0},
+    "edge_count": {"type": "integer", "minimum": 0},
+    "isolated_node_count": {"type": "integer", "minimum": 0},
+    "graph_fingerprint": {"type": "string"},
+    "layers": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

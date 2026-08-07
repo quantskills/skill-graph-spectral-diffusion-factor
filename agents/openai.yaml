@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graph Spectral Diffusion Factor"
+  short_description: "Build auditable factors with fixed graph diffusion"
+  default_prompt: "Use $graph-spectral-diffusion-factor to build declared point-in-time graph diffusion factors from a normalized PandaData factor panel."

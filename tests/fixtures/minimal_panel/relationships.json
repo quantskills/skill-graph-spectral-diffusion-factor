@@ -1,0 +1,7 @@
+[
+  {"source":"A","target":"B","layer":"industry","weight":1.0},
+  {"source":"B","target":"A","layer":"industry","weight":1.0},
+  {"source":"B","target":"C","layer":"industry","weight":1.0},
+  {"source":"A","target":"C","layer":"concept","weight":1.0},
+  {"source":"D","target":"D","layer":"industry","weight":1.0}
+]

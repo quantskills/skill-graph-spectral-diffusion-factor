@@ -1,0 +1,13 @@
+---
+description: Load the graph spectral diffusion factor skill for deterministic point-in-time graph-signal features.
+alwaysApply: false
+---
+
+# Graph Spectral Diffusion Factor
+
+1. Load `.cursor/skills/graph-spectral-diffusion-factor/SKILL.md` as the authoritative contract.
+2. Read the PandaData, channel, graph, spectral-filter, and point-in-time references needed for the task.
+3. Use deterministic scripts under `scripts/`; do not replace fixed graph filters with a GNN or arbitrary model.
+4. Require authorization for direct `panda_data` access, evaluation, and writes. Never handle credentials or private data.
+5. Fail closed on missing channels, future graph membership, isolated nodes, or missing T-1 signals.
+6. Do not issue investment or trading instructions.

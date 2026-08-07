@@ -1,0 +1,13 @@
+channels:
+  momentum: [momentum, cal_daily_rise]
+  liquidity: [liquidity, cal_10d_120d_turnover_ratio]
+  risk: [residual_volatility, cal_30d_close_std_ratio]
+graph_layers: [industry, concept]
+layer_weights:
+  industry: 1.0
+  concept: 0.5
+  correlation: 0.0
+propagation_steps: 2
+min_degree: 0.1
+correlation_window: 60
+correlation_threshold: 0.7

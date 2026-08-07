@@ -1,0 +1,10 @@
+[
+  {"date":"2026-08-03","symbol":"A","momentum":-1.0,"cal_daily_rise":-0.02,"liquidity":-1.5,"cal_10d_120d_turnover_ratio":0.8,"residual_volatility":-1.0,"cal_30d_close_std_ratio":0.03,"beta":-1.0,"ratio_market_cap_float":100.0},
+  {"date":"2026-08-03","symbol":"B","momentum":0.0,"cal_daily_rise":0.00,"liquidity":0.0,"cal_10d_120d_turnover_ratio":1.0,"residual_volatility":0.0,"cal_30d_close_std_ratio":0.04,"beta":0.0,"ratio_market_cap_float":200.0},
+  {"date":"2026-08-03","symbol":"C","momentum":1.0,"cal_daily_rise":0.02,"liquidity":1.5,"cal_10d_120d_turnover_ratio":1.2,"residual_volatility":1.0,"cal_30d_close_std_ratio":0.05,"beta":1.0,"ratio_market_cap_float":300.0},
+  {"date":"2026-08-03","symbol":"D","momentum":0.5,"cal_daily_rise":0.01,"liquidity":0.5,"cal_10d_120d_turnover_ratio":1.1,"residual_volatility":0.5,"cal_30d_close_std_ratio":0.045,"beta":0.5},
+  {"date":"2026-08-04","symbol":"A","momentum":0.5,"cal_daily_rise":0.01,"liquidity":0.2,"cal_10d_120d_turnover_ratio":1.1,"residual_volatility":-0.5,"cal_30d_close_std_ratio":0.035,"beta":-0.8,"ratio_market_cap_float":101.0},
+  {"date":"2026-08-04","symbol":"B","momentum":1.0,"cal_daily_rise":0.02,"liquidity":0.7,"cal_10d_120d_turnover_ratio":1.3,"residual_volatility":0.2,"cal_30d_close_std_ratio":0.045,"beta":0.1,"ratio_market_cap_float":201.0},
+  {"date":"2026-08-04","symbol":"C","momentum":-0.5,"cal_daily_rise":-0.01,"liquidity":-0.8,"cal_10d_120d_turnover_ratio":0.7,"residual_volatility":1.2,"cal_30d_close_std_ratio":0.055,"beta":1.1,"ratio_market_cap_float":301.0},
+  {"date":"2026-08-04","symbol":"D","momentum":0.2,"cal_daily_rise":0.005,"liquidity":0.1,"cal_10d_120d_turnover_ratio":1.0,"residual_volatility":0.3,"cal_30d_close_std_ratio":0.04,"beta":0.4}
+]

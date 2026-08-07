@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date", "symbol", "factor_status", "graph_diffusion_confirmation", "graph_residual_reversal"],
+  "properties": {
+    "date": {"type": "string"},
+    "symbol": {"type": "string"},
+    "factor_status": {"enum": ["available", "isolated_node", "missing_channel", "missing_lag", "invalid_graph"]},
+    "degree": {"type": "number", "minimum": 0},
+    "graph_diffusion_confirmation": {"type": ["number", "null"]},
+    "graph_residual_reversal": {"type": ["number", "null"]},
+    "price_liquidity_divergence": {"type": ["number", "null"]},
+    "graph_version": {"type": "string"},
+    "algorithm_version": {"type": "string"}
+  },
+  "additionalProperties": true
+}

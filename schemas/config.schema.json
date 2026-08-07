@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["channels", "graph_layers", "propagation_steps", "min_degree"],
+  "properties": {
+    "channels": {
+      "type": "object",
+      "required": ["momentum", "liquidity", "risk"],
+      "properties": {
+        "momentum": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "liquidity": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "risk": {"type": "array", "minItems": 2, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "graph_layers": {"type": "array", "minItems": 1, "items": {"enum": ["industry", "concept", "correlation"]}},
+    "layer_weights": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+    "propagation_steps": {"type": "integer", "minimum": 1, "maximum": 5},
+    "min_degree": {"type": "number", "minimum": 0},
+    "correlation_window": {"type": "integer", "minimum": 20},
+    "correlation_threshold": {"type": "number", "minimum": 0, "maximum": 1}
+  },
+  "additionalProperties": false
+}
