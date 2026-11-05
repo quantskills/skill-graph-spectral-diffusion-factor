@@ -43,3 +43,6 @@ This Skill does not replace PandaData APIs, factor evaluation, IC, backtests, po
 ## License
 
 GPL-3.0. See [LICENSE](LICENSE).
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.

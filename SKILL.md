@@ -7,7 +7,7 @@ quantSkills:
   repository_url: https://github.com/quantskills/skill-graph-spectral-diffusion-factor
   project_type: skill
   collection: factor-research-methods
-  license: GPL-3.0
+  license: GPL-3.0-only
   category: factor
   tags: [graph-signal-processing, diffusion-factor, spectral-filter, pandadata, point-in-time]
   platforms: [claude-code, codex, openclaw, cursor, hermes]
@@ -68,7 +68,7 @@ Do not use this skill to:
 
 ## Confirmed PandaData Contract
 
-A bounded live smoke test with `panda_data==0.0.12` confirmed `get_factor` output keyed by `date × symbol` for two A-share symbols and two dates. The following fields were returned with complete coverage in that smoke test:
+A bounded live smoke test with `panda_data==1.0.6` confirmed `get_factor` output keyed by `date × symbol` for two A-share symbols and two dates. The following fields were returned with complete coverage in that smoke test:
 
 - momentum channel: `momentum`, `cal_daily_rise`;
 - liquidity channel: `liquidity`, `cal_10d_120d_turnover_ratio`;

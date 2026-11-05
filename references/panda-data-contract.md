@@ -1,6 +1,6 @@
 # PandaData Contract
 
-Runtime reference: `panda_data==0.0.12` and `skill-pandadata-api`.
+Runtime reference: `panda_data==1.0.6` and `skill-pandadata-api`.
 
 Confirmed signature:
 
